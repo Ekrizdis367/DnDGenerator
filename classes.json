@@ -1,0 +1,12 @@
+{
+    "Classes": [
+        {
+            "Class":"Rogue",
+            "HD":8,
+            "Subclasses": [
+                {"Subclass":"Assassin"},
+                {"Subclass":"Thief"}
+            ]
+        }
+    ]
+}
