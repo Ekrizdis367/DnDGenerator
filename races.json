@@ -1,11 +1,23 @@
-{
-    "Races": [
-        {
-            "Race":"Elf",
-            "Subraces": [
-                {"Subrace":"Drow"},
-                {"Subrace":"High Elf"}
-            ]
-        }
-    ]
-}
+[
+    "Dragonborn",
+    "Dwarf",
+    "Elf",
+    "Gnome",
+    "Half-Elf",
+    "Halfling",
+    "Half-Orc",
+    "Human",
+    "Tiefling",
+    "Aarakocra",
+    "Aasimar",
+    "Air Genasi",
+    "Changeling",
+    "Earth Genasi",
+    "Firbolg",
+    "Fire Genasi",
+    "Goliath",
+    "Kenku",
+    "Tabaxi",
+    "Tortle",
+    "Water Genasi"
+]

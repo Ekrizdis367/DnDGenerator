@@ -1,12 +1,15 @@
-{
-    "Classes": [
-        {
-            "Class":"Rogue",
-            "HD":8,
-            "Subclasses": [
-                {"Subclass":"Assassin"},
-                {"Subclass":"Thief"}
-            ]
-        }
-    ]
-}
+[
+    "Artificer",
+    "Barbarian",
+    "Fighter",
+    "Paladin",
+    "Cleric",
+    "Druid",
+    "Warlock",
+    "Rogue",
+    "Sorcerer",
+    "Wizard",
+    "Ranger",
+    "Monk",
+    "Bard"
+]

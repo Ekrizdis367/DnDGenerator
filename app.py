@@ -10,42 +10,70 @@ fClasses = open('classes.json')
 fPersonalities = open('personalities.json')
 fProfessions = open('professions.json')
 fRaces = open('races.json')
-fNames = open('names.json')
+fFeatures = open('features.json')
 
 # Initialize JSON Variables
 classes = json.load(fClasses)
 personalities = json.load(fPersonalities)
 professions = json.load(fProfessions)
 races = json.load(fRaces)
-names = json.load(fNames)
+features = json.load(fFeatures)
 
-# Dice Functions
 def roll(dice, die):
-    return random.randint(dice,die)
+    x = dice * die
+    print(random.randint(dice,x))
 
-def randomNPC():
-    return False
+def info():
+    a = random.choice(['Male','Female','Other'])
+    c = random.choice(['Straight','Bisexual','Gay'])
+    print(a)
+    print(c)
+    print(' ')
 
 def randomClass():
-    return False
+    c = random.choice(classes)
+    print('Class: ' + c)
 
 def randomRace():
-    return False
+    r = random.choice(races)
+    print('Race: ' + r)
+    if r == "Changeling":
+        s = r
+        while s == "Changeling":
+            s = random.choice(races)
+        print('Presentation: ' + s)
 
 def randomPersonality():
-    personality = random.choice(personalities)
-    return personality
+    a = random.choice(personalities["Positive"])
+    b = random.choice(personalities["Neutral"])
+    c = random.choice(personalities["Negative"])
+    print(' ')
+    print('Positive: ' + a)
+    print('Neutral: ' + b)
+    print('Negative: ' + c)
+    print(' ')
 
 def randomProfession():
-    profession = random.choice(professions)
-    return profession
+    # credit: https://www.reddit.com/r/DnDBehindTheScreen/comments/bjkejj/i_made_a_list_of_every_profession_i_could_think/
+    p = random.choice(professions)
+    print('Profession: ' + p)
 
-def randomName():
-    name = random.choice(names)
-    return name
+def randomFeature():
+    f = random.choice(features)
+    print('Feature: ' + f)
+
+def randomNPC():
+    r = random.randint(1,100)
+    info()
+    randomRace()
+    randomPersonality()
+    randomFeature()
+    randomFeature()
+    print(' ')
+    if r <= 10: randomClass()
+    else: randomProfession()
 
 # =============================================================
-
 while True:
     clear()
     print("==============================")
@@ -54,7 +82,7 @@ while True:
     print("3. Race                       ")
     print("4. Personality                ")
     print("5. Profession                 ")
-    print("6. Names                      ")
+    print("6. Feature                    ")
     print("==============================")
     num = input("Input: ")
     print("\n")
@@ -69,11 +97,11 @@ while True:
         case "4":
             randomPersonality()
         case "5":
-            print(randomProfession())
+            randomProfession()
         case "6":
-            print(randomName())
+            randomFeature()
         case _:
-            break
+            print()
 
     print("\n")
     input("Press Enter to continue...")
