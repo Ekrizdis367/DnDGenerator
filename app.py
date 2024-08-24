@@ -24,8 +24,8 @@ def roll(dice, die):
     print(random.randint(dice,x))
 
 def info():
-    a = random.choice(['Male','Female','Other'])
-    c = random.choice(['Straight','Bisexual','Gay'])
+    a = random.choice(['Male','Female','Fluid'])
+    c = random.choice(['Straight','Bisexual','Gay','Asexual'])
     print(a)
     print(c)
     print(' ')
